@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>sudoku</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <!-- 头部标题 -->
+    <div class="header">
+        <h1>数独游戏</h1>
+    </div>
+    <!-- 数独部分 -->
+    <div id="container" class="container"></div>
+    <!-- 底部按钮 -->
+    <div class="dashbottom" id="dashbottom">
+        <button type="button" id="check">检查</button>
+        <button type="button" id="reset">重置</button>
+        <button type="button" id="clear">清理</button>
+        <button type="button" id="rebulid">重建</button>
+    </div>
+    <!-- 弹出面板 -->
+    <div class="popup hidden" id="popup">
+        <div class="row">
+            <span>1</span><span>2</span><span>3</span>
+        </div>
+        <div class="row">
+            <span>4</span><span>5</span><span>6</span>
+        </div>
+        <div class="row">
+            <span>7</span><span>8</span><span>9</span>
+        </div>
+        <div class="row">
+            <span class="mark1"></span><span class="cancel"></span><span class="mark2"></span>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+</body>
+
+</html>
