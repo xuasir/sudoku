@@ -1,0 +1,178 @@
+@charset "UTF-8";
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+    opacity: 0; }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1; } }
+
+.slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown; }
+
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+    opacity: 0; }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1; } }
+
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp; }
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1); }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9); }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03); }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97); }
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+
+.bounceIn {
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  background-color: snow;
+  font-family: "Consolas", "\5FAE\8F6F\96C5\9ED1";
+  user-select: none;
+  max-width: 450px; }
+  body * {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    max-width: 450px; }
+
+.header {
+  width: 89.99%;
+  background-color: #eeeeee;
+  padding: 1rem 0 0.6rem 10%;
+  margin-bottom: 4rem;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2); }
+
+.dashbottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem; }
+  .dashbottom button {
+    float: left;
+    width: 25%;
+    height: 3rem;
+    border: 1px solid #000;
+    border-bottom: 2px solid #000;
+    background: rgba(255, 255, 255, 0);
+    color: snow;
+    background-color: #000;
+    outline: none; }
+  .dashbottom :first-child {
+    border-left: 2px solid #000; }
+  .dashbottom :last-child {
+    border-right: 2px solid #000; }
+
+.container {
+  padding-left: 5%; }
+  .container .row span {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    height: 2rem;
+    line-height: 2rem;
+    width: 10%;
+    border: 1px solid #000;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    background-color: snow; }
+  .container .row :first-child {
+    border-left-width: 1.5px; }
+  .container .row :last-child {
+    border-right-width: 1.5px; }
+  .container .row :nth-child(3) {
+    border-right-width: 1px; }
+  .container .row :nth-child(6) {
+    border-right-width: 1px; }
+  .container .row .empty {
+    color: snow; }
+  .container .row .fixed {
+    background-color: #d7d6d6; }
+  .container .row .mark1 {
+    background-color: lightskyblue; }
+    .container .row .mark1.empty {
+      color: lightskyblue; }
+  .container .row .mark2 {
+    background-color: lightgreen; }
+    .container .row .mark2.empty {
+      color: lightgreen; }
+  .container .row .error {
+    color: red; }
+    .container .row .error.empty {
+      color: snow; }
+  .container :first-child span {
+    border-top-width: 1.5px; }
+  .container :last-child span {
+    border-bottom-width: 1.5px; }
+  .container :nth-child(3) span {
+    border-bottom-width: 1px; }
+  .container :nth-child(6) span {
+    border-bottom-width: 1px; }
+
+.hidden {
+  display: none; }
+
+.popup {
+  position: absolute; }
+  .popup .row span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: snow;
+    text-align: center; }
+  .popup .row .mark1 {
+    background-color: lightskyblue; }
+  .popup .row .mark2 {
+    background-color: lightgreen; }
+  .popup :last-child span {
+    border-top: 1px solid #000; }
